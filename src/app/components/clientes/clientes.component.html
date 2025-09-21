@@ -1,0 +1,72 @@
+<section class="container">
+    <div id="col-1">
+        <div class="top" *ngIf="_clientes.length >0">
+
+            <table style="width: 617px;">
+                <tr>
+                    <td class="cell-name">Nome</td>
+                    <td class="cell-name">Data Nascimento</td>
+                    <td class="cell-name">NIF</td>
+                    <td class="cell-name"> Endereço</td>
+                </tr>
+                <tr class="hover" *ngFor="let c of _clientes">
+                    <td>{{c.nome}}</td>
+                    <td>{{c.dataNasc}}</td>
+                    <td>{{c.nif}}</td>
+                    <td><span (click)="selectedCliente(c)" class="add">Adicionar/ver</span></td>
+
+                    <td style="text-align: center;"><span (click)="deleteclienteFunction(c)"
+                            class="addCliente">delete</span></td>
+                </tr>
+                <tr *ngIf="insert">
+                    <td *ngIf="insert"><input class="input-add" [(ngModel)]="newCliente.nome"></td>
+                    <td *ngIf="insert"><input type="date" value="" class="input-add" [(ngModel)]="newCliente.dataNasc">
+                    </td>
+                    <td *ngIf="insert"><input class="input-add" type="number" [(ngModel)]="newCliente.nif"></td>
+                    <td *ngIf="insert"><span class="input-add" (click)="selectedCliente(newCliente)"
+                            class="add">Adicionar/ver</span></td>
+                </tr>
+            </table>
+            <br><br>
+            <span (click)="inserting()" class="addCliente">Adicionar cliente +</span>
+        </div>
+    </div>
+</section>
+
+<div [ngClass]="{'enderecos': !show, 'enderecos2':show}">
+    <div *ngIf="show">
+
+        <span class="endereco_title">Endereço(s)</span>
+        <br> <br>
+        <div *ngFor="let end of enderecos">
+            <span (click)="deleteFunction(end.id)" class="add2">Eliminar</span>
+            <span class="end-names">Rua:</span>{{end.rua}}<br>
+            <span class="end-names">Código Postal:</span>{{end.codigoPostal}} <br>
+            <span class="end-names">Numero:</span>{{end.numero}} <br>
+            <span class="end-names">Complemento:</span>{{end.complemento}} <br>
+            <span class="end-names">Conselho:</span>{{end.conselho}} <br>
+            <span class="end-names">Distrito:</span>{{end.distrito}} <br>
+            <br>
+            <hr>
+        </div>
+        <div *ngIf="add">
+            <br>
+            <span class="end-names">Rua:</span><br><textarea class="input-add-text" [(ngModel)]="rua"></textarea><br>
+            <span class="end-names">Código Postal:</span><input class="input-add" [(ngModel)]="codigoPostal"
+                type="text"> <br>
+            <span class="end-names">Numero:</span><input class="input-add" [(ngModel)]="numero" type="text"> <br>
+            <span class="end-names">Complemento:</span><input class="input-add" [(ngModel)]="complemento" type="text">
+            <br>
+            <span class="end-names">Conselho:</span><input class="input-add" [(ngModel)]="conselho" type="text"> <br>
+            <span class="end-names">Distrito:</span><input class="input-add" [(ngModel)]="distrito" type="text"> <br>
+            <br>
+            <span (click)="saveFunction()" class="add2">Salvar</span> <span (click)="addCancel()"
+                class="add3">Cancelar</span>
+        </div>
+        <br>
+        <span *ngIf="addBt" (click)="addFunction()" class="add3">Adicionar + </span> <span (click)="showFunction()"
+            *ngIf="close" class="add2">Cancelar/Fechar</span>
+    </div>
+</div>
+
+<div *ngIf="showAlert"><app-alert class="alert" [color]="color" [message]="message"></app-alert></div>

@@ -1,0 +1,175 @@
+.cell-name {
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px !important;
+    font-weight: 700;
+    width: 220px;
+    border-bottom: 2px solid gray;
+    height: 30px;
+
+}
+
+td {
+    height: 30px;
+    min-width: 170px !important;
+}
+
+.top {
+    margin-top: 50px;
+}
+
+.container {
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+}
+
+#col-1 {
+
+    flex: 1;
+}
+
+#col-2 {
+
+    flex: 1;
+}
+
+.enderecos {
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 0.2s ease-in-out;
+    font-size: 11px;
+    margin-top: 45px;
+    margin-left: -500px;
+    position: absolute;
+    padding: 20px;
+    background-color: #C8C8C8;
+    border-radius: 10px;
+}
+
+.enderecos2 {
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 0.2s ease-in-out;
+    font-size: 11px;
+    margin-top: 45px;
+    margin-left: 0px;
+    position: absolute;
+    padding: 20px;
+    background-color: #C8C8C8;
+    border-radius: 10px;
+    width: 500px;
+}
+
+.end-names {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px !important;
+    font-weight: 700;
+    width: 105px;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.hover:hover {
+    background-color: #C8C8C8;
+    cursor: pointer;
+}
+
+.add {
+    color: #708090;
+    cursor: pointer;
+    top: 0px;
+    position: relative;
+    font-weight: 700;
+}
+
+.add2 {
+    color: #708090;
+    cursor: pointer;
+    position: relative;
+    font-weight: 700 !important;
+    position: absolute;
+    right: 15px;
+}
+
+.add3 {
+    color: #708090;
+    cursor: pointer;
+    position: relative;
+    font-weight: 700 !important;
+    position: absolute;
+    left: 15px;
+}
+
+.input-add {
+    border-radius: 5px;
+    background-color: rgb(245, 245, 245);
+    outline: #708090 solid 1px;
+    border: none;
+    padding: 5px;
+    margin-bottom: 5px;
+    font-size: 11px !important;
+
+}
+
+.input-add-text {
+    height: 40px;
+    width: 268px;
+    border-radius: 5px;
+    background-color: rgb(245, 245, 245);
+    outline: #708090 solid 1px;
+    border: none;
+    padding: 5px;
+    margin-bottom: 5px;
+    font-size: 11px;
+}
+
+.alert {
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+    right: 15px;
+    height: 50px;
+    color: white;
+    bottom: 15px;
+
+}
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.addCliente {
+    color: #708090;
+    cursor: pointer;
+    top: 0px;
+    position: relative;
+    font-weight: 700;
+    margin-right: 20px;
+}
+
+.deleteCliente {
+    color: #708090;
+    cursor: pointer;
+    top: 0px;
+    position: relative;
+    font-weight: 700;
+}
+
+.endereco_title{
+       font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px !important;
+    font-weight: 700;
+    width: 220px;
+    border-bottom: 2px solid gray;
+    height: 30px;
+    margin-left: -5px; 
+}
