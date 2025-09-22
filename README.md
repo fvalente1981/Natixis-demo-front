@@ -8,8 +8,8 @@ To start a local development server, run:
 
 ```
 ng i
-
-```
 ng serve
+```
+
 ```
 
