@@ -24,6 +24,9 @@ apiUrl: 'http://localhost:8080/api/'
 
 
 Change the value to the URL where your backend is running.
+For example:
+
+apiUrl: 'http://127.0.0.1:8081/api/'
 ```
 
 ```
